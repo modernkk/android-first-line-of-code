@@ -19,7 +19,7 @@ public class FirstActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+                Intent intent = new Intent("com.modernkk.activitytest.ACTION_START");
                 startActivity(intent);
             }
         });
