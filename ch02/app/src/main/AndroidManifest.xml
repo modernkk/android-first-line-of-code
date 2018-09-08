@@ -22,6 +22,7 @@
             <intent-filter>
                 <action android:name="com.modernkk.activitytest.ACTION_START" />
                 <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.modernkk.activitytest.MY_CATEGORY" />
             </intent-filter>
         </activity>
     </application>
