@@ -1,5 +1,6 @@
 package com.modernkk.uiwidgettest;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.media.Image;
 import android.support.v7.app.AlertDialog;
@@ -31,23 +32,28 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "onClick: ");
-                AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
-                dialog.setTitle("This is Dialog");
-                dialog.setMessage("Something important");
-                dialog.setCancelable(false);
-                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Log.d(TAG, "onClick: dialog");
-                    }
-                });
-                dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Log.d(TAG, "onClick: cancel");
-                    }
-                });
-                dialog.show();
+//                AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
+//                dialog.setTitle("This is Dialog");
+//                dialog.setMessage("Something important");
+//                dialog.setCancelable(false);
+//                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        Log.d(TAG, "onClick: dialog");
+//                    }
+//                });
+//                dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        Log.d(TAG, "onClick: cancel");
+//                    }
+//                });
+//                dialog.show();
+                ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
+                progressDialog.setTitle("This is ProgressDialog");
+                progressDialog.setMessage("Loading...");
+                progressDialog.setCancelable(true);
+                progressDialog.show();
             }
         });
     }
