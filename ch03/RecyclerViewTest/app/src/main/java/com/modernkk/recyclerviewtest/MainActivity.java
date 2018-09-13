@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         initFruits();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(
-                3, StaggeredGridLayoutManager.VERTICAL
+                4, StaggeredGridLayoutManager.VERTICAL
         );
         recyclerView.setLayoutManager(layoutManager);
         FruitAdapter adapter = new FruitAdapter(fruitList);
